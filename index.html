@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThermaLead | Precision DPE Sales Intelligence</title>
+    <title>ThermaLead | Precision DPE Sales Intelligence for Renovation Pros</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -14,11 +14,12 @@
     
     <nav>
         <div class="container nav-content">
-            <div class="logo">ThermaLead_v1.0</div>
+            <div class="logo">ThermaLead_v1.1</div>
             <div class="nav-links">
-                <a href="#leads">Live Feed</a>
+                <a href="#leads">Live Data</a>
+                <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
-                <a href="mailto:raphael@nilos.io" class="btn btn-outline">Contact Sales</a>
+                <a href="#waitlist" class="btn btn-primary">Join Beta</a>
             </div>
         </div>
     </nav>
@@ -26,12 +27,12 @@
     <header class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
-                <div class="terminal-badge">READY_FOR_SYNC: 20M_RECORDS</div>
+                <div class="terminal-badge">LIVE_SYNC: 20M_DPE_RECORDS</div>
                 <h1>Convert the 3.9M <span class="text-glow">Passoires Thermiques</span> in France.</h1>
-                <p>We repackage public ADEME data into filterable lead lists for energy renovation pros. Target F & G rated buildings by heating type, construction year, and precise geo-location.</p>
+                <p>We repackage official ADEME data into qualified, filterable lead lists. Target F & G rated buildings by heating system, construction year, and precise geo-location.</p>
                 <div class="hero-actions">
-                    <a href="#pricing" class="btn btn-primary">Initialize Access</a>
-                    <a href="#leads" class="btn btn-secondary">View Sample Feed</a>
+                    <a href="#waitlist" class="btn btn-primary">Join the Beta</a>
+                    <a href="#leads" class="btn btn-secondary">Explore Live Feed</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -43,48 +44,24 @@
     <section id="leads" class="live-feed">
         <div class="container">
             <div class="section-header">
-                <h2 class="mono">// CURRENT_DATABASE_QUERY</h2>
-                <p>Active DPE filings indexed as of April 2026.</p>
+                <h2 class="mono">// REAL_TIME_INVENTORY</h2>
+                <p>Latest energy diagnostic records from across France. Updated weekly.</p>
             </div>
             <div class="table-container">
-                <table>
+                <table id="dpe-table">
                     <thead>
                         <tr>
                             <th>Address</th>
                             <th>Class</th>
                             <th>Heating</th>
                             <th>Surface</th>
-                            <th>Status</th>
+                            <th>Diagnostic Date</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="dpe-body">
+                        <!-- Loaded via script.js -->
                         <tr>
-                            <td>12 Rue de Rivoli, Paris</td>
-                            <td><span class="badge rating-g">G</span></td>
-                            <td>Fuel Oil</td>
-                            <td>45m²</td>
-                            <td class="mono-cyan">RAW_LEAD</td>
-                        </tr>
-                        <tr>
-                            <td>45 Avenue Jean Jaurès, Lyon</td>
-                            <td><span class="badge rating-f">F</span></td>
-                            <td>Gas Boiler</td>
-                            <td>62m²</td>
-                            <td class="mono-cyan">HIGH_INTENT</td>
-                        </tr>
-                        <tr>
-                            <td>22 Rue de la République, Marseille</td>
-                            <td><span class="badge rating-g">G</span></td>
-                            <td>Fuel Oil</td>
-                            <td>38m²</td>
-                            <td class="mono-cyan">HOT_LEAD</td>
-                        </tr>
-                        <tr>
-                            <td>15 Rue Sainte-Catherine, Bordeaux</td>
-                            <td><span class="badge rating-f">F</span></td>
-                            <td>Gas Boiler</td>
-                            <td>88m²</td>
-                            <td class="mono-cyan">RAW_LEAD</td>
+                            <td colspan="5" style="text-align: center; padding: 3rem;">Initializing secure data connection...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -93,21 +70,51 @@
     </section>
 
     <section id="features" class="features">
-        <div class="container grid-3">
-            <div class="feature-card">
-                <div class="feature-icon">01</div>
-                <h3>The Gas-to-PAC Pivot</h3>
-                <p>Filter leads by "Fuel Oil" or "Gas" heating to target owners whose subsidies are expiring. 90% higher conversion for Heat Pump installers.</p>
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="mono">SYSTEM_CAPABILITIES</h2>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">02</div>
-                <h3>Regulatory Alerts</h3>
-                <p>Identify G-rated rental properties facing immediate bans. These owners must renovate now or lose their rental income.</p>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">01</div>
+                    <div class="trust-indicator">HIGH_TRUST</div>
+                    <h3>The Gas-to-PAC Pivot</h3>
+                    <p>Identify F/G properties using oil/gas heat. These are the highest-conversion targets for Heat Pump (PAC) installers as subsidies shift away from fossil fuels.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">02</div>
+                    <div class="trust-indicator">REGULATORY</div>
+                    <h3>Rental Ban Triggers</h3>
+                    <p>Filter by Class G (banned 2025) and Class F (banned 2028). Provide solutions to landlords before they lose their rental income.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">03</div>
+                    <div class="trust-indicator">GEO_PRECISION</div>
+                    <h3>Hyper-Local Clusters</h3>
+                    <p>Group leads by street or neighborhood to maximize the ROI of your physical canvassing teams and reduce travel logistics.</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">03</div>
-                <h3>Geospatial Clusters</h3>
-                <p>Locate "Energy Sinks" — high-density clusters of poorly rated buildings to optimize your logistics and physical canvassing teams.</p>
+        </div>
+    </section>
+
+    <section id="waitlist" class="waitlist">
+        <div class="container waitlist-container">
+            <div class="waitlist-content">
+                <h2 class="mono">SECURE_ACCESS_REQUEST</h2>
+                <p>We are onboarding 10 Beta Design Partners (PAC/ITE installers) this month. Join the waitlist to get early access to high-intent leads in your zone.</p>
+                <form id="waitlist-form" class="waitlist-form">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Professional Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Full Name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Request Beta Access</button>
+                    <div id="form-response" class="form-status"></div>
+                </form>
+            </div>
+            <div class="waitlist-visual">
+                <img src="images/abstract-tech-visualization-of-data-pack.png" alt="Data flow visualization">
             </div>
         </div>
     </section>
@@ -115,7 +122,7 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="mono">SELECT_SUBSCRIPTION_PLAN</h2>
+                <h2 class="mono">SUBSCRIPTION_MODELS</h2>
             </div>
             <div class="grid-2">
                 <div class="price-card">
@@ -127,9 +134,9 @@
                         <li>Single department access</li>
                         <li>20 lead credits per month</li>
                         <li>Energy class & Surface filters</li>
-                        <li>CSV Export enabled</li>
+                        <li>Standard CSV Exports</li>
                     </ul>
-                    <a href="https://buy.stripe.com/test_28E28q0UUdXYctK53R1ZS2m" class="btn btn-primary full-width">Initialize Plan</a>
+                    <a href="https://buy.stripe.com/test_28E28q0UUdXYctK53R1ZS2m" class="btn btn-secondary full-width">Join Waiting List</a>
                 </div>
                 <div class="price-card featured">
                     <div class="price-header">
@@ -139,11 +146,11 @@
                     <ul>
                         <li>Multi-department access</li>
                         <li>100 lead credits per month</li>
-                        <li>Advanced "Heating Type" filters</li>
-                        <li>"Year of Construction" targeting</li>
-                        <li>Priority weekly sync</li>
+                        <li>Advanced Heating Type filters</li>
+                        <li>Year of Construction targeting</li>
+                        <li>Weekly Data Sync</li>
                     </ul>
-                    <a href="https://buy.stripe.com/test_5kQeVceLK3jkbpGdAn1ZS2n" class="btn btn-primary full-width">Initialize Plan</a>
+                    <a href="https://buy.stripe.com/test_5kQeVceLK3jkbpGdAn1ZS2n" class="btn btn-primary full-width">Request Pro Access</a>
                 </div>
             </div>
         </div>
@@ -153,12 +160,14 @@
         <div class="container footer-content">
             <div class="footer-left">
                 <div class="logo">ThermaLead</div>
-                <p>© 2026 Precision Sales Intelligence. All rights reserved.</p>
+                <p>© 2026 ThermaLead SaaS. Built for the French Energy Transition.</p>
             </div>
             <div class="footer-right">
-                <p>Data Source: ADEME Open Data (Etalab License)</p>
+                <p>Data: ADEME Etalab | Compliance: GDPR / RGPD</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
