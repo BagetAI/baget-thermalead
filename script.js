@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchLeads() {
         try {
-            const response = await fetch(`https://baget.ai/api/public/databases/${leadsDbId}/rows`);
+            const response = await fetch(`https://app.baget.ai/api/public/databases/${leadsDbId}/rows`);
             const result = await response.json();
             
             if (result && result.length > 0) {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formResponse.style.color = 'var(--cyan)';
 
             try {
-                const response = await fetch(`https://baget.ai/api/public/databases/${signupDbId}/rows`, {
+                const response = await fetch(`https://app.baget.ai/api/public/databases/${signupDbId}/rows`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ data: formData })
